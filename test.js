@@ -14,11 +14,16 @@ describe("pow", function() {
 		}
 
 		it("при возведении в отрицательную степень результат NaN", function() {
-			assert(isNaN(pow(2, -1)));
+			assert(isNaN(pow(2, -1)), "pow(2, -1) не NaN");
 		});
 
 		it("при возведении в дробную степень результат NaN", function() {
-			assert(isNaN(pow(2, 1.5)));
+			assert(isNaN(pow(2, 1.5)), "pow(2, 1.5) не NaN");
+		});
+
+		
+		it("ноль в нулевой степени даёт NaN", function() {
+			assert(isNaN(pow(0, 0)), "0 в степени 0 не NaN");
 		});
 
 	});
